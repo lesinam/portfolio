@@ -40,7 +40,7 @@
         <div class="hero-content container">
             <img src="your-profile-picture.JPG" alt="プロフィール写真" class="profile-picture">
             <h1>LE SI NAM</h1>
-            <p class="tagline">建築&土木技術者・構造解析の専門家 | サイバーセキュリティ分野への転身を目指しています</p>
+            <p class="tagline">建築&amp;土木技術者・構造解析の専門家 | サイバーセキュリティ分野への転身を目指しています</p>
             <a href="#about" class="btn primary-btn">詳細を見る</a>
         </div>
     </header>
@@ -128,22 +128,22 @@
                         <div class="skill-item">
                             <i class="fab fa-html5 skill-icon html-icon"></i>
                             <h4>HTML5</h4>
-                            <div class="skill-bar-container"><div class="skill-bar" data-skill="70"></div></div>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="50"></div></div>
                         </div>
                         <div class="skill-item">
                             <i class="fab fa-css3-alt skill-icon css-icon"></i>
                             <h4>CSS3</h4>
-                            <div class="skill-bar-container"><div class="skill-bar" data-skill="70"></div></div>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="50"></div></div>
                         </div>
                         <div class="skill-item">
                             <i class="fab fa-js skill-icon js-icon"></i>
                             <h4>JavaScript</h4>
-                            <div class="skill-bar-container"><div class="skill-bar" data-skill="50"></div></div>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="30"></div></div>
                         </div>
                         <div class="skill-item">
                             <i class="fab fa-java skill-icon java-icon"></i>
                             <h4>Java</h4>
-                            <div class="skill-bar-container"><div class="skill-bar" data-skill="50"></div></div>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="20"></div></div>
                         </div>
                     </div>
                 </div>
@@ -190,79 +190,6 @@
                 </div>
                 </div>
         </section>
-        <!-- <section id="projects" class="section-padding">
-            <div class="container">
-                <h2>プロジェクト実績</h2>
-                <div class="project-grid">
-    
-                    <div class="project-card">
-                        <h3><i class="fas fa-shopping-cart project-icon"></i> E-Commerce Webアプリケーションの開発 (Java/Springベース)</h3>
-                        <p class="project-description">
-                            Java (Spring BootまたはServlet) をバックエンド、HTML/CSS/JavaScriptをフロントエンドに使用して構築したフルスタックのECサイトです。RESTful API設計、ユーザー認証、及び決済統合を実装しました。
-                        </p>
-                        <ul class="project-features">
-                            <li><strong>機能:</strong> 商品カタログ、ショッピングカート、ユーザー登録・ログイン、管理者ダッシュボード。</li>
-                            <li><strong>認証:</strong> Spring Security (または tương đương) を使用したセッション管理と認証フロー。</li>
-                            <li><strong>データベース:</strong> MySQLを使用した商品・ユーザーデータ管理。</li>
-                        </ul>
-                        <div class="project-tech-stack">
-                            <span>Java </span>
-                            <span>HTML5 & CSS3</span>
-                            <span>JavaScript </span>
-                            <span>REST API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="[ECサイトのGitHubリンク]" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fab fa-github"></i> ソースコード</a>
-                            <a href="[ライブデモリンク]" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fas fa-external-link-alt"></i> ライブデモ</a>
-                        </div>
-                        
-                        <div class="security-insight">
-                            <h4><i class="fas fa-lock security-icon"></i> セキュリティ分析と対応 (Java Backend)</h4>
-                            <p>Javaおよびウェブアプリケーション開発において、私は以下の脆弱性対策に注力しました。</p>
-                            <ul>
-                                <li>**SQLインジェクション対策:** JDBCまたはORM使用時、必ず**`PreparedStatement`**または同等の仕組みでパラメータ化されたクエリを使用。</li>
-                                <li>**パスワード管理:** ログイン処理にBCrypt/PBKDF2などの**強力なハッシュ化**をJava側で実装し、DBに保存。</li>
-                                <li>**XSS (クロスサイトスクリプティング) 対策:** フロントエンドでユーザー入力をエスケープし、バックエンド (Java Servlet Filter) でサニタイズ処理を徹底。</li>
-                                <li>**CSRF (クロスサイトリクエストフォージェリ) 対策:** Spring Securityなどのフレームワークの組み込み機能を利用して、トークン検証を有効化。</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <h3><i class="fas fa-hard-hat project-icon"></i> プロジェクト設計管理 Webアプリ (Java/JSP/Servlet)</h3>
-                        <p class="project-description">
-                            これまでの建築・土木設計・構造解析の経験を活かし、設計フェーズにおけるタスク管理、リソース配分、進捗可視化を目的としたWebツールを開発しました。技術スタックはJava/JSP/Servletで構築。
-                        </p>
-                        <ul class="project-features">
-                            <li><strong>タスク管理:</strong> 各設計工程（構造解析、製図、積算）の担当者、期限、依存関係を定義。</li>
-                            <li><strong>リソース配分:</strong> 専門技術者やソフトウェアライセンスの利用状況をトラッキングし、効率的な配置を支援。</li>
-                            <li><strong>進捗可視化:</strong> HTML/JavaScriptベースのライブラリを用いてガントチャート風のダッシュボードを実装。</li>
-                        </ul>
-                        <div class="project-tech-stack">
-                            <span>Java </span>
-                            <span>HTML5 & CSS3 </span>
-                            <span>JavaScript </span>
-                            <span>Apache Tomcat</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="[建設管理システムのGitHubリンク]" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fab fa-github"></i> ソースコード</a>
-                        </div>
-                        
-                        <div class="security-insight">
-                            <h4><i class="fas fa-lock security-icon"></i> セキュリティ分析とアクセス制御 (Java環境)</h4>
-                            <p>機密性の高い設計データを扱うため、特に認証後のアクセス制御とデータ保護に注力しました。</p>
-                            <ul>
-                                <li>**認証・セッション管理:** Java Servlet APIを利用し、安全なセッションID管理とタイムアウト設定を実装。</li>
-                                <li>**アクセス制御 (ACL):** JavaのInterceptorまたはFilterを使用して、リクエスト前にユーザーの権限（ロール）をチェックし、認可されていないページへのアクセスを拒否。</li>
-                                <li>**データ検証:** サーバー側 (Java層) でビジネスロジックを実行する前に、すべての入力データに対して型チェックとサニタイズを厳密に実施。</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-
         <section id="goals" class="section-padding bg-light">
             <div class="container">
                 <h2>将来の目標とITセキュリティへの志向</h2>
@@ -301,14 +228,8 @@
             </div>
         </section>
     </main>
-
-    <!-- <footer>
-        <div class="container">
-            <p>&copy; 2025 LE SI NAM. All rights reserved.</p>
-        </div>
-    </footer> -->
-
     <script src="script.js"></script>
 </body>
 </html>
+
 
