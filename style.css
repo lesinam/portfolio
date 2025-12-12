@@ -33,6 +33,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.4s, color 0.4s; 
+    padding-top: 80px; /* Điều chỉnh giá trị này bằng chiều cao thực tế của Navbar */
 }
 
 a {
@@ -63,12 +64,17 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    /* Hiệu ứng Sticky Header */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    
+    /* THAY ĐỔI TỪ STICKY SANG FIXED */
+    position: fixed; /* Cố định với màn hình */
+    top: 0;           /* Cố định ở vị trí trên cùng */
+    left: 0;          /* Rất quan trọng: Bắt đầu từ mép trái */
+    width: 100%;      /* Rất quan trọng: Chiếm toàn bộ chiều rộng màn hình */
+    
+    z-index: 1000;    
+    
     background-color: var(--card-bg);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Tăng bóng đổ nhẹ */
     transition: background-color 0.4s;
 }
 .dark-mode .navbar {
