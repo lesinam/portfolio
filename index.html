@@ -1,796 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>CV DEV - Developer</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE SI NAM のウェブプロフィール - 建設業からサイバーセキュリティへ</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
- -->
-        <!-- Template Stylesheet -->
-        <link href="style.css" rel="stylesheet">
-    </head>
-
-    <body onload="animate_string()" data-spy="scroll" data-target=".navbar" data-offset="51">
-        <marquee id = "welcome">Chào mừng các bạn đến với CV của mình</marquee>
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">DevCV</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Trang chủ</a>
-                        <a href="#about" class="nav-item nav-link">Thông tin</a>
-                        <a href="#service" class="nav-item nav-link">Dịch vụ</a>
-                        <a href="#experience" class="nav-item nav-link">Kinh nghiệm</a>
-                        <a href="#portfolio" class="nav-item nav-link">Công nghệ</a>
-                        <a href="#price" class="nav-item nav-link">Giá</a>
-                        <a href="#review" class="nav-item nav-link">Đánh giá</a>
-                        <a href="#team" class="nav-item nav-link">Nhóm</a>
-                        <a href="#blog" class="nav-item nav-link">Blog</a>
-                        <a href="#contact" class="nav-item nav-link">Liên hệ</a>
-                    </div>
-                </div>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home" class="modern-logo minimal-logo">
+                    <svg viewBox="0 0 100 100" class="logo-icon">
+                        <path d="M50 5 L90 25 V75 L50 95 L10 75 V25 Z" fill="none" stroke="#17A2B8" stroke-width="4" stroke-linejoin="round"/>
+                        <path d="M50 15 L80 30 V70 L50 85 L20 70 V30 Z" fill="none" stroke="#17A2B8" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M50 25 L70 35 V65 L50 75 L30 65 V35 Z" fill="none" stroke="#17A2B8" stroke-width="2" stroke-linejoin="round"/>
+                        
+                        <text x="50" y="58" font-family="'Poppins', sans-serif" font-size="28" font-weight="700" fill="#17A2B8" text-anchor="middle" dominant-baseline="middle">LSN</text>
+                    </svg>
+                    <span class="logo-text">LE SI NAM</span>
+                </a>
             </div>
-        </div>
-        <!-- Nav Bar End -->
-
-
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <p>I'm</p>
-                                <h1>Anna Tran</h1>
-                                <h2></h2>
-                                <div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-                            </div>
-                            <div class="hero-btn">
-                                <a class="btn" href="">Hire Me</a>
-                                <a class="btn" href="">Contact Me</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="img/hero.png" alt="Hero Image">
-                        </div>
-                    </div>
-                </div>
+            <ul class="nav-links">
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#projects">プロジェクト</a></li>
+                <li><a href="#goals">目標</a></li>
+                <li><a href="#contact">連絡先</a></li>
+                <li><button id="dark-mode-toggle" class="dark-mode-btn"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
             </div>
+        </nav>
+        <div class="hero-content container">
+            <img src="your-profile-picture.jpg" alt="プロフィール写真" class="profile-picture">
+            <h1>LE SI NAM</h1>
+            <p class="tagline">建築&土木技術者・構造解析の専門家 | サイバーセキュリティ分野への転身を目指しています</p>
+            <a href="#about" class="btn primary-btn">詳細を見る</a>
         </div>
-        <!-- Hero End -->
+    </header>
 
-
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="img/about.jpg" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-header text-left">
-                                <p>Learn About Me</p>
-                                <h2>10 Years Experience</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
-                                </p>
-                            </div>
-                            <div class="skills">
-                                <div class="skill-name">
-                                    <p>Web Design</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Web Development</p><p>95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Apps Design</p><p>90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Apps Development</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <a class="btn" href="">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
+    <main>
         
-        
-        <!-- Service Start -->
-        <div class="service" id="service">
+        <section id="about" class="section-padding">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What I do</p>
-                    <h2>Awesome Quality Services</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Web Design</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop-code"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Web Development</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Apps Design</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-apple"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Apps Development</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-        
-        
-         <!-- Experience Start -->
-        <div class="experience" id="experience">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Resume</p>
-                    <h2>Working Experience</h2>
-                </header>
-                <div class="timeline">
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2010 - 2012</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2012 - 2018</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2018 - 2019</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2019 - 2020</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2020 - 2021</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2021 - Now</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Job Experience End -->
-        
-        
-        <!-- Banner Start -->
-        <div class="banner wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Reasonable Price</p>
-                    <h2>Get A <span>Special</span> Price</h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                <h2>私について</h2>
+                <div class="about-content">
+                    <p>私は<strong>LE SI NAM</strong>と申します。建設業界で長年、**構造解析と設計**に携わってきました。この経験を通じて、複雑な問題を論理的に解決する思考力、細部への注意深さ、そしてプロジェクト管理能力を培ってきました。これらのスキルは、IT分野、特にセキュリティ分野への転身においても強力な基盤となると確信しています。</p>
+                    
+                    <h3>現在の職務と役割</h3>
+                    <ul>
+                        <li><i class="fas fa-drafting-pole"></i> <strong>構造解析と設計:</strong> 専門の**構造計算ソフトウェア**を用いた構造計算と分析。</li>
+                        <li><i class="fas fa-pencil-ruler"></i> <strong>製図作成:</strong> 専門ソフトウェアによる**施工図の作成**。</li>
+                        <li><i class="fas fa-money-bill-wave"></i> <strong>コスト管理:</strong> 各プロジェクトの**費用積算（見積もり）**と予算作成。</li>
+                        <li><i class="fas fa-calendar-alt"></i> <strong>スケジュール管理:</strong> 各工程の**進捗管理と日程調整**。</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px;">
+                        <a href="https://drive.google.com/file/d/1f8CVzMSKP436A1528-vpYhQznc4nehIi/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn secondary-btn" style="background-color: var(--card-bg); border: 1px solid var(--primary-color); color: var(--primary-color); display: inline-flex; align-items: center;">
+                            <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> 職務経歴書 (詳細) を見る
+                        </a>
                     </p>
-                    <a class="btn">Pricing Plan</a>
+                    <p>現在、情報技術の重要性とサイバーセキュリティの必要性の高まりを感じ、**ITセキュリティ**の知識とスキルを独学で集中的に習得しています。建設で培った強固な技術的背景と、新しいセキュリティ知識を融合させ、セキュリティアナリストやペネトレーションテスターとして、社会に貢献したいと考えています。</p>
                 </div>
             </div>
-        </div>
-        <!-- Banner End -->
+        </section>
 
-
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
+        <section id="skills" class="section-padding bg-light">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Portfolio</p>
-                    <h2>My Excellent Portfolio</h2>
+                <h2>私のスキルと資格</h2>
+                
+                <div class="skills-category">
+                    <h3>建設・解析ソフトウェア</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fas fa-calculator skill-icon"></i>
+                            <h4>構造計算ソフトウェア</h4>
+                            <p>高度な**専門ソフトウェア**を使用した構造計算・解析経験。</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-ruler-combined skill-icon"></i>
+                            <h4>CAD/製図ソフトウェア</h4>
+                            <p>施工図および技術文書作成用の専門ソフトウェア使用経験。</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-invoice-dollar skill-icon"></i>
+                            <h4>積算・予算管理ツール</h4>
+                            <p>コストと予算の正確な積算と管理。</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-1">Web Design</li>
-                            <li data-filter=".filter-2">Mobile Apps</li>
-                            <li data-filter=".filter-3">Game Dev</li>
+
+                <div class="skills-category">
+                    <h3>資格・認定（IT/ウェブ）</h3>
+                    <div class="skill-list">
+                        <div class="skill-item certified-skill">
+                            <i class="fas fa-lock skill-icon"></i>
+                            <h4>情報セキュリティマネジメント試験 (SG)</h4>
+                            <p>セキュリティ管理の基礎知識を証明。</p>
+                        </div>
+                        <div class="skill-item certified-skill">
+                            <i class="fas fa-code skill-icon"></i>
+                            <h4>基本情報技術者試験 (FE)</h4>
+                            <p>IT全般の基礎知識と論理的な思考力を証明。</p>
+                        </div>
+                        <div class="skill-item certified-skill">
+                            <i class="fas fa-laptop-code skill-icon"></i>
+                            <h4>WEBクリエイター能力試験</h4>
+                            <p>ウェブサイト制作のスキルを証明。</p>
+                        </div>
+                        <div class="skill-item certified-skill">
+                            <i class="fas fa-palette skill-icon"></i>
+                            <h4>WEBデザイナー技能検定 3級</h4>
+                            <p>ウェブデザインの基本知識を証明。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>ウェブ開発・プログラミングスキル</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5 skill-icon html-icon"></i>
+                            <h4>HTML5</h4>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt skill-icon css-icon"></i>
+                            <h4>CSS3</h4>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js skill-icon js-icon"></i>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="50"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java skill-icon java-icon"></i>
+                            <h4>Java</h4>
+                            <div class="skill-bar-container"><div class="skill-bar" data-skill="50"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>サイバーセキュリティ知識 (学習中・習得済み)</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt skill-icon security-icon"></i>
+                            <h4>セキュリティ基礎概念</h4>
+                            <p>脅威、脆弱性、CIA三原則などの基本原則の理解。</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired skill-icon security-icon"></i>
+                            <h4>ネットワークとプロトコル</h4>
+                            <p>TCP/IP、DNS, HTTP/S、ネットワーク構造の知識。</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon security-icon"></i>
+                            <h4>データベースセキュリティ</h4>
+                            <p>SQLインジェクションなどの攻撃と対策の理解。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <section id="projects" class="section-padding">
+            <div class="container">
+                <h2>プロジェクト実績</h2>
+                <div class="project-grid">
+    
+                    <div class="project-card">
+                        <h3><i class="fas fa-shopping-cart project-icon"></i> E-Commerce Webアプリケーションの開発 (Java/Springベース)</h3>
+                        <p class="project-description">
+                            Java (Spring BootまたはServlet) をバックエンド、HTML/CSS/JavaScriptをフロントエンドに使用して構築したフルスタックのECサイトです。RESTful API設計、ユーザー認証、及び決済統合を実装しました。
+                        </p>
+                        <ul class="project-features">
+                            <li><strong>機能:</strong> 商品カタログ、ショッピングカート、ユーザー登録・ログイン、管理者ダッシュボード。</li>
+                            <li><strong>認証:</strong> Spring Security (または tương đương) を使用したセッション管理と認証フロー。</li>
+                            <li><strong>データベース:</strong> MySQLを使用した商品・ユーザーデータ管理。</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-1.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>eCommerce Website</h3>
-                                <a class="btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">+</a>
-                            </div>
+                        <div class="project-tech-stack">
+                            <span>Java </span>
+                            <span>HTML5 & CSS3</span>
+                            <span>JavaScript </span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="[ECサイトのGitHubリンク]" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fab fa-github"></i> ソースコード</a>
+                            <a href="[ライブデモリンク]" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fas fa-external-link-alt"></i> ライブデモ</a>
+                        </div>
+                        
+                        <div class="security-insight">
+                            <h4><i class="fas fa-lock security-icon"></i> セキュリティ分析と対応 (Java Backend)</h4>
+                            <p>Javaおよびウェブアプリケーション開発において、私は以下の脆弱性対策に注力しました。</p>
+                            <ul>
+                                <li>**SQLインジェクション対策:** JDBCまたはORM使用時、必ず**`PreparedStatement`**または同等の仕組みでパラメータ化されたクエリを使用。</li>
+                                <li>**パスワード管理:** ログイン処理にBCrypt/PBKDF2などの**強力なハッシュ化**をJava側で実装し、DBに保存。</li>
+                                <li>**XSS (クロスサイトスクリプティング) 対策:** フロントエンドでユーザー入力をエスケープし、バックエンド (Java Servlet Filter) でサニタイズ処理を徹底。</li>
+                                <li>**CSRF (クロスサイトリクエストフォージェリ) 対策:** Spring Securityなどのフレームワークの組み込み機能を利用して、トークン検証を有効化。</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-2.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Product Landing Page</h3>
-                                <a class="btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">+</a>
-                            </div>
+                    
+                    <div class="project-card">
+                        <h3><i class="fas fa-hard-hat project-icon"></i> プロジェクト設計管理 Webアプリ (Java/JSP/Servlet)</h3>
+                        <p class="project-description">
+                            これまでの建築・土木設計・構造解析の経験を活かし、設計フェーズにおけるタスク管理、リソース配分、進捗可視化を目的としたWebツールを開発しました。技術スタックはJava/JSP/Servletで構築。
+                        </p>
+                        <ul class="project-features">
+                            <li><strong>タスク管理:</strong> 各設計工程（構造解析、製図、積算）の担当者、期限、依存関係を定義。</li>
+                            <li><strong>リソース配分:</strong> 専門技術者やソフトウェアライセンスの利用状況をトラッキングし、効率的な配置を支援。</li>
+                            <li><strong>進捗可視化:</strong> HTML/JavaScriptベースのライブラリを用いてガントチャート風のダッシュボードを実装。</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Java </span>
+                            <span>HTML5 & CSS3 </span>
+                            <span>JavaScript </span>
+                            <span>Apache Tomcat</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="[建設管理システムのGitHubリンク]" target="_blank" rel="noopener noreferrer" class="btn secondary-btn"><i class="fab fa-github"></i> ソースコード</a>
+                        </div>
+                        
+                        <div class="security-insight">
+                            <h4><i class="fas fa-lock security-icon"></i> セキュリティ分析とアクセス制御 (Java環境)</h4>
+                            <p>機密性の高い設計データを扱うため、特に認証後のアクセス制御とデータ保護に注力しました。</p>
+                            <ul>
+                                <li>**認証・セッション管理:** Java Servlet APIを利用し、安全なセッションID管理とタイムアウト設定を実装。</li>
+                                <li>**アクセス制御 (ACL):** JavaのInterceptorまたはFilterを使用して、リクエスト前にユーザーの権限（ロール）をチェックし、認可されていないページへのアクセスを拒否。</li>
+                                <li>**データ検証:** サーバー側 (Java層) でビジネスロジックを実行する前に、すべての入力データに対して型チェックとサニタイズを厳密に実施。</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-3.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>JavaScript quiz game</h3>
-                                <a class="btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-4.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>JavaScript drawing</h3>
-                                <a class="btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-5.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Social Mobile Apps</h3>
-                                <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-6.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Company Website</h3>
-                                <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-        </div>
-        <!-- Portfolio End -->
-        
-        
-        <!-- Banner Start -->
-        <div class="banner wow zoomIn" data-wow-delay="0.1s">
+        </section> -->
+
+        <section id="goals" class="section-padding bg-light">
             <div class="container">
-                <div class="section-header text-center">
-                    <p>Awesome Discount</p>
-                    <h2>Get <span>30%</span> Discount</h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
-                    </p>
-                    <a class="btn">Order Now</a>
+                <h2>将来の目標とITセキュリティへの志向</h2>
+                <div class="goal-list">
+                    
+                    <div class="goal-item">
+                        <i class="fas fa-graduation-cap goal-icon"></i>
+                        <h4>上級セキュリティ資格の取得</h4>
+                        <p>現在、**情報処理安全確保支援士 (SC)** と **CISSP** の取得に向けて学習を継続しています。これらの資格を通じて、技術的スキルとマネジメントスキルの両方を強化し、セキュリティ分野のリーダーシップを目指します。</p>
+                    </div>
+
+                    <div class="goal-item">
+                        <i class="fas fa-search-dollar goal-icon"></i>
+                        <h4>特定の専門分野の発展</h4>
+                        <p>特に**ペネトレーションテスト（侵入テスト）**、**脆弱性分析**、および**アプリケーションセキュリティ**の分野に強い関心があります。安全で堅牢なシステム構築に貢献したいです。</p>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <i class="fas fa-bullseye goal-icon"></i>
+                        <h4>セキュリティ専門家への完全な転身</h4>
+                        <p>建設での深い分析思考を活かし、システムの脆弱性発見と解決に貢献できる総合的なセキュリティ専門家になることが最大の目標です。</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Banner End -->
-        
-        
-        <!-- Price Start -->
-        <div class="price" id="price">
+        </section>
+
+        <section id="contact" class="section-padding">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Pricing Plan</p>
-                    <h2>Affordable Price</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Basic</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>49<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="price-item featured-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Standard</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>99<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="price-item">
-                            <div class="price-header">
-                                <div class="price-title">
-                                    <h2>Premium</h2>
-                                </div>
-                                <div class="price-prices">
-                                    <h2><small>$</small>149<span>/ mo</span></h2>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <div class="price-description">
-                                    <ul>
-                                        <li>Bootstrap 4</li>
-                                        <li>Font Awesome 5</li>
-                                        <li>Responsive Design</li>
-                                        <li>Browser Compatibility</li>
-                                        <li>Easy To Use</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="price-footer">
-                                <div class="price-action">
-                                    <a class="btn" href="">Order Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h2>ご連絡はこちらへ</h2>
+                <p>新しい機会やネットワーキングに常にオープンです。お気軽にご連絡ください:</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope contact-icon"></i> Eメール: <a href="mailto:lenam.tohyoh@gmail.com">lenam.tohyoh@gmail.com</a></p>
+                    <p><i class="fab fa-linkedin contact-icon"></i> LinkedIn: <a href="https://www.linkedin.com/in/si-nam-le-066b61310/" target="_blank" rel="noopener noreferrer">LE SI NAM</a></p>
+                    <p><i class="fab fa-github contact-icon"></i> GitHub: <a href="https://github.com/lesinam" target="_blank" rel="noopener noreferrer">lesinam</a></p>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <div class="container">
+            <p>&copy; 2023 LE SI NAM. All rights reserved.</p>
         </div>
-        <!-- Price End -->
-        
-        
-        <!-- Testimonial Start -->
-        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
-            <div class="container">
-                <div class="testimonial-icon">
-                    <i class="fa fa-quote-left"></i>
-                </div>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-1.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-3.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Customer Name</h3>
-                            <h4>Profession</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+    </footer> -->
 
-
-        <!-- Team Start -->
-        <div class="team" id="team">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Team</p>
-                    <h2>Expert Team Members</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-1.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Nguyen Thi Lan</h2>
-                                <h4>Web Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-2.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Tran Thi Nhung</h2>
-                                <h4>Web Developer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-3.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Nguyen Thu Ha</h2>
-                                <h4>Apps Designer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-4.jpg" alt="Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Nguyen Thi Kim Cuc</h2>
-                                <h4>Apps Developer</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
-                                </p>
-                                <div class="team-social">
-                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-        
-        
-        <!-- Contact Start -->
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-
-        <!-- Blog Start -->
-        <div class="blog" id="blog">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Articles</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="blog-img">
-                                <img src="img/blog-1.jpg" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Web Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>5</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="blog-img">
-                                <img src="img/blog-2.jpg" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Apps Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
-
-
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Kate Winslet</h2>
-                        <h3>12 - Hoang Mai - Ha Noi</h3>
-                        <div class="footer-menu">
-                            <p>+012 345 67890</p>
-                            <p>contact@henry.com</p>
-                        </div>
-                        <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">Henry</a></p>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
-        </div>
-
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
