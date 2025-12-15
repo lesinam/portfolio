@@ -410,102 +410,7 @@ a:hover {
     list-style-type: disc;
 }
 
-/* --- 6. Mục Tiêu (Goals) --- */
-.goal-list {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    text-align: center;
-}
-
-.goal-item {
-    flex: 1;
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-light);
-}
-
-.goal-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-/* --- 7. Liên Hệ và Footer --- */
-.contact-info {
-    max-width: 600px;
-    margin: 30px auto;
-    text-align: left;
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
-.contact-icon {
-    color: var(--primary-color);
-    margin-right: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* --- 8. Responsive (Mobile) --- */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: var(--card-bg);
-        border-top: 1px solid #ccc;
-        z-index: 10;
-        padding: 20px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-    }
-    
-    .dark-mode-btn {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1.1rem;
-    }
-
-    .goal-list {
-        flex-direction: column;
-    }
-    
-    .section-padding {
-        padding: 40px 0;
-    }
-}
-/* --- 9. Định dạng cho Khối Thông báo Cập Nhật (Updating Notice) --- */
+/* --- 6. Định dạng cho Khối Thông báo Cập Nhật (Updating Notice) --- */
 
 .updating-notice-card {
     max-width: 800px;
@@ -572,4 +477,97 @@ footer {
     background-color: var(--primary-color);
     color: var(--card-bg);
     transform: translateY(-2px);
+}
+
+
+/* --- 7. Mục Tiêu (Goals) --- */
+.goal-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    text-align: center;
+}
+
+.goal-item {
+    flex: 1;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+}
+
+.goal-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- 8. Liên Hệ và Footer --- */
+.contact-info {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- 9. Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: var(--card-bg);
+        border-top: 1px solid #ccc;
+        z-index: 10;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .dark-mode-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .goal-list {
+        flex-direction: column;
+    }
 }
