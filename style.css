@@ -33,7 +33,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.4s, color 0.4s; 
-    padding-top: 150px; /* Điều chỉnh giá trị này bằng chiều cao thực tế của Navbar */
+    padding-top: 80px; /* Điều chỉnh giá trị này bằng chiều cao thực tế của Navbar */
 }
 
 a {
@@ -55,7 +55,7 @@ a:hover {
 /* --- 2. Header và Navbar (Sticky Header) --- */
 .hero-section {
     background: var(--bg-color);
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -175,7 +175,10 @@ a:hover {
     margin-top: 15px;
     font-weight: 700;
 }
-
+.hero-content{
+    padding-top: 80px;
+    padding-bottom: -80px;
+}
 .tagline {
     font-size: 1.3rem;
     color: var(--secondary-color);
