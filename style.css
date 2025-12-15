@@ -33,7 +33,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.4s, color 0.4s; 
-    padding-top: 80px; /* Điều chỉnh giá trị này bằng chiều cao thực tế của Navbar */
+    padding-top: 150px; /* Điều chỉnh giá trị này bằng chiều cao thực tế của Navbar */
 }
 
 a {
@@ -409,7 +409,6 @@ a:hover {
     margin-left: 20px;
     list-style-type: disc;
 }
-
 /* --- 6. Định dạng cho Khối Thông báo Cập Nhật (Updating Notice) --- */
 
 .updating-notice-card {
@@ -478,8 +477,6 @@ a:hover {
     color: var(--card-bg);
     transform: translateY(-2px);
 }
-
-
 /* --- 7. Mục Tiêu (Goals) --- */
 .goal-list {
     display: flex;
@@ -562,7 +559,9 @@ footer {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-
+    .hero-content{
+        padding-top: 80px;
+    }
     .tagline {
         font-size: 1.1rem;
     }
