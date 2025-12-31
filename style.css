@@ -307,56 +307,17 @@ body.dark-mode .skill-item {
 }
 
 /* --- 5. 強み・比較 (Comparison) --- */
-.comparison-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.comparison-card {
-    flex: 1;
-    min-width: 300px;
-    background: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: var(--shadow-light);
-    overflow: hidden;
-}
-
-.comp-header {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-size: 1.1rem;
-}
-
-.comp-header.construction { background-color: #6c757d; } 
-.comp-header.cyber { background-color: var(--primary-color); } 
-
-.comp-body {
-    padding: 20px;
-}
-
-.comp-item {
-    padding: 10px;
-    background: rgba(0,0,0,0.02);
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-.dark-mode .comp-item { background: rgba(255,255,255,0.05); }
-
-.comp-item strong { display: block; color: var(--text-color); }
-.comp-item p { font-size: 0.9rem; margin: 0; color: var(--secondary-color); }
-
-.comp-arrow {
-    text-align: center;
-    color: var(--primary-color);
-    margin: 5px 0;
-    font-size: 1.2rem;
-}
-
+/* --- 5. 比較カード (Philosophy) --- */
+.comparison-container { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+.comparison-card { flex: 1; min-width: 280px; background: var(--card-bg); border-radius: 10px; box-shadow: var(--shadow-light); overflow: hidden; }
+.comp-header { padding: 15px; text-align: center; color: white; font-weight: bold; }
+.construction-card .comp-header { background: #6c757d; }
+.cyber-card .comp-header { background: var(--primary-color); }
+.comp-body { padding: 20px; }
+.comp-body ul { list-style: none; }
+.comp-body li { margin-bottom: 10px; color: var(--secondary-color); font-size: 0.95rem; }
+.dark-mode .comp-body li { color: #ccc; }
+.transfer-icon { font-size: 2rem; color: var(--text-color); opacity: 0.5; }
 
 /* --- 6. 更新中カード (Updating Card) - 修正済み --- */
 .updating-card {
@@ -469,20 +430,13 @@ body.dark-mode .goal-item {
 }
 
 /* --- 8. 連絡先とフッター --- */
-.contact-info {
-    text-align: center;
-    font-size: 1.1rem;
+.contact-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.contact-btn {
+    padding: 10px 20px; border-radius: 5px;
+    border: 1px solid #ddd; color: var(--text-color);
+    display: flex; align-items: center; gap: 10px;
 }
-
-.contact-info p {
-    margin-bottom: 15px;
-}
-
-.contact-icon {
-    color: var(--primary-color);
-    margin-right: 10px;
-    width: 25px;
-}
+.contact-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
 
 /* --- 9. モバイル対応 --- */
 @media (max-width: 768px) {
