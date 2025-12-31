@@ -1,21 +1,21 @@
-/* --- 1. Cài đặt Chung và Biến CSS (Đã đổi màu Primary) --- */
+/* --- 1. 一般設定と変数 --- */
 :root {
-    --primary-color: #17a2b8; /* Xanh Cyber */
+    --primary-color: #17a2b8; /* サイバーブルー */
     --secondary-color: #6c757d; 
-    --accent-color: #38c172; /* Xanh lá cây (Cho chứng chỉ đạt được) */
+    --accent-color: #38c172; /* アクセントカラー */
     --text-color: #333;
-    --bg-color: #f0f2f5; /* Nền xám nhạt */
-    --card-bg: #ffffff; /* Card trắng tinh */
+    --bg-color: #f0f2f5; 
+    --card-bg: #ffffff; 
     --font-family: 'Poppins', 'Noto Sans JP', sans-serif; 
-    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Shadow nhẹ */
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); 
 }
 
-/* Biến cho Dark Mode */
+/* ダークモード設定 */
 .dark-mode {
     --text-color: #e9ecef;
     --bg-color: #1a1a1a;
     --card-bg: #2d2d2d;
-    --primary-color: #00bcd4; /* Xanh Cyber sáng hơn cho Dark Mode */
+    --primary-color: #00bcd4; 
     --secondary-color: #adb5bd;
     --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.4); 
 }
@@ -24,7 +24,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Dùng box-sizing border-box cho tất cả */
 }
 
 body {
@@ -33,7 +32,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.4s, color 0.4s; 
-    padding-top: 80px; /* Điều chỉnh giá trị này bằng chiều cao thực tế của Navbar */
+    padding-top: 80px; 
 }
 
 a {
@@ -52,10 +51,10 @@ a:hover {
     padding: 0 20px;
 }
 
-/* --- 2. Header và Navbar (Sticky Header) --- */
+/* --- 2. ヘッダーとナビゲーション --- */
 .hero-section {
     background: var(--bg-color);
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -63,61 +62,47 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    
-    /* THAY ĐỔI TỪ STICKY SANG FIXED */
-    position: fixed; /* Cố định với màn hình */
-    top: 0;           /* Cố định ở vị trí trên cùng */
-    left: 0;          /* Rất quan trọng: Bắt đầu từ mép trái */
-    width: 100%;      /* Rất quan trọng: Chiếm toàn bộ chiều rộng màn hình */
-    
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;    
-    
     background-color: var(--card-bg);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Tăng bóng đổ nhẹ */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: background-color 0.4s;
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
 .dark-mode .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* Logo: LSN - Hình học lồng ghép */
 .logo a.minimal-logo {
     display: flex;
     align-items: center;
     height: 40px; 
-    width: auto; 
-    margin: 0; 
 }
 
 .logo-icon {
-    width: 40px; /* Kích thước icon */
+    width: 40px;
     height: 40px;
     transition: transform 0.3s ease, opacity 0.3s;
 }
 
 .logo a.minimal-logo:hover .logo-icon {
-    transform: rotate(5deg) scale(1.1); /* Hiệu ứng xoay nhẹ và phóng to */
+    transform: rotate(5deg) scale(1.1);
     opacity: 0.9;
 }
 
-/* Đảm bảo màu SVG thay đổi theo Dark Mode */
-.logo-icon path,
-.logo-icon line {
-    stroke: var(--primary-color);
-}
-.logo-icon text {
-    fill: var(--primary-color);
-}
-.dark-mode .logo-icon path,
-.dark-mode .logo-icon text {
-    stroke: var(--primary-color);
-    /* fill: var(--primary-color); */
-}
+.logo-icon path, .logo-icon line { stroke: var(--primary-color); }
+.logo-icon text { fill: var(--primary-color); }
 
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-links li {
@@ -127,6 +112,7 @@ a:hover {
 .nav-links a {
     font-weight: 600;
     padding: 5px 10px;
+    font-size: 0.95rem;
 }
 
 .dark-mode-btn {
@@ -136,7 +122,7 @@ a:hover {
     cursor: pointer;
     padding: 8px 12px;
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 15px;
     transition: all 0.3s;
 }
 
@@ -149,20 +135,19 @@ a:hover {
     display: none; 
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--primary-color);
 }
 
-/* Hero Content */
 .profile-picture {
     width: 180px; 
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 30px;
-    /* Viền đôi (Double Border Effect) */
+    margin-top: 40px;
     padding: 5px; 
     border: 3px solid var(--primary-color);
     background: var(--card-bg);
-    box-shadow: 0 0 0 5px var(--primary-color), 0 10px 20px rgba(0,0,0,0.1); 
+    box-shadow: 0 0 0 5px rgba(23, 162, 184, 0.2), 0 10px 20px rgba(0,0,0,0.1); 
     transition: transform 0.3s;
 }
 
@@ -171,27 +156,28 @@ a:hover {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     margin-top: 15px;
     font-weight: 700;
 }
-.hero-content{
-    padding-top: 80px;
-    padding-bottom: -80px;
-}
+
 .tagline {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--secondary-color);
     margin-bottom: 30px;
     font-weight: 600; 
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 25px;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
 }
 
 .primary-btn {
@@ -200,18 +186,30 @@ a:hover {
 }
 
 .primary-btn:hover {
-    background-color: #0056b3;
+    background-color: #138496;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
     transform: translateY(-2px);
 }
 
-/* --- 3. Sections Chung & Giới Thiệu --- */
+/* --- 3. セクション共通設定 --- */
 .section-padding {
     padding: 80px 0;
 }
 
 .section-padding h2 {
     text-align: center;
-    font-size: 2.8rem; 
+    font-size: 2.5rem; 
     margin-bottom: 50px;
     color: var(--text-color);
     position: relative;
@@ -220,7 +218,7 @@ a:hover {
 
 .section-padding h2::after {
     content: '';
-    width: 80px;
+    width: 60px;
     height: 4px;
     background-color: var(--primary-color);
     position: absolute;
@@ -233,44 +231,39 @@ a:hover {
 .bg-light {
     background-color: var(--card-bg);
 }
+body:not(.dark-mode) .bg-light {
+    background-color: #ffffff;
+}
+body:not(.dark-mode) section:not(.bg-light) {
+    background-color: #f0f2f5;
+}
+body.dark-mode .bg-light {
+    background-color: #2d2d2d;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 .about-content p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: justify;
+    font-size: 1.05rem;
 }
 
-.about-content h3 {
-    color: var(--primary-color);
-    margin-top: 30px;
-    margin-bottom: 10px;
-    border-left: 3px solid var(--primary-color);
-    padding-left: 10px;
-}
-
-.about-content ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.about-content ul li {
-    margin-bottom: 8px;
-}
-
-.about-content ul li i {
-    color: var(--primary-color);
-    margin-right: 10px;
-}
-
-/* --- 4. Kỹ Năng (Skills) --- */
+/* --- 4. スキル (Skills) --- */
 .skills-category {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .skills-category h3 {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 25px;
     font-size: 1.5rem;
     color: var(--primary-color);
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
 }
 
 .skill-list {
@@ -280,7 +273,7 @@ a:hover {
 }
 
 .skill-item {
-    background-color: var(--card-bg);
+    background-color: var(--bg-color);
     padding: 25px;
     border-radius: 12px; 
     box-shadow: var(--shadow-light);
@@ -289,256 +282,225 @@ a:hover {
     transition: all 0.3s;
 }
 
-/* Hiệu ứng Neon Glow nhẹ khi hover */
-.skill-item:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 10px 30px rgba(23, 162, 184, 0.4); 
-    border-color: var(--primary-color);
+body.dark-mode .skill-item {
+    background-color: #383838;
 }
 
-.dark-mode .skill-item:hover {
-    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4);
+.skill-item:hover {
+    transform: translateY(-8px); 
+    border-color: var(--primary-color);
 }
 
 .skill-icon {
-    font-size: 3rem; 
+    font-size: 2.5rem; 
     color: var(--primary-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* Làm nổi bật Chứng chỉ đã đạt được */
 .certified-skill {
     border: 2px solid var(--accent-color); 
-    background-color: #e6ffe1; 
-    box-shadow: 0 4px 15px rgba(56, 193, 114, 0.3); 
+    background-color: rgba(56, 193, 114, 0.1) !important; 
 }
 
-.dark-mode .certified-skill {
-    border-color: var(--accent-color); 
-    background-color: #1f3d2f; 
-    box-shadow: 0 4px 15px rgba(56, 193, 114, 0.2); 
+.certified-skill h4 {
+    color: #28a745; 
 }
 
-.certified-skill h4, .certified-skill .skill-icon {
-    color: var(--accent-color) !important; 
+/* --- 5. 強み・比較 (Comparison) --- */
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-/* Thanh kỹ năng (Skill Bar) */
-.skill-bar-container {
-    background-color: var(--bg-color); 
-    border-radius: 5px;
-    height: 8px; 
-    margin-top: 10px;
-    overflow: hidden;
-    border: 1px solid #ccc;
-}
-
-.skill-bar {
-    height: 100%;
-    background-color: var(--primary-color);
-    width: 0; 
-    transition: width 1.2s ease-out; 
-}
-
-
-/* --- 5. Dự Án (Projects) --- */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 12px;
+.comparison-card {
+    flex: 1;
+    min-width: 300px;
+    background: var(--card-bg);
+    border-radius: 10px;
     box-shadow: var(--shadow-light);
-    border-top: 5px solid var(--primary-color);
-    transition: transform 0.3s;
+    overflow: hidden;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.comp-header {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1rem;
 }
 
-.project-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
+.comp-header.construction { background-color: #6c757d; } 
+.comp-header.cyber { background-color: var(--primary-color); } 
 
-.project-description {
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-}
-
-.project-tech-stack span {
-    display: inline-block;
-    background-color: var(--bg-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.85rem;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}
-
-.project-links .btn {
-    margin-right: 10px;
-}
-
-/* Nâng cấp phần Insight Bảo mật */
-.security-insight {
-    margin-top: 25px;
+.comp-body {
     padding: 20px;
-    border-radius: 8px;
-    background-color: #fff1f1; 
-    border: 1px solid #dc3545; 
 }
 
-.dark-mode .security-insight {
-    background-color: #3d1c1c;
-    border-color: #ff4d4f;
-}
-
-.security-insight h4 {
-    color: #dc3545; 
-    border-bottom: 1px dashed #dc3545;
-    padding-bottom: 5px;
+.comp-item {
+    padding: 10px;
+    background: rgba(0,0,0,0.02);
+    border-radius: 5px;
     margin-bottom: 10px;
 }
+.dark-mode .comp-item { background: rgba(255,255,255,0.05); }
 
-.security-insight ul {
-    margin-left: 20px;
-    list-style-type: disc;
+.comp-item strong { display: block; color: var(--text-color); }
+.comp-item p { font-size: 0.9rem; margin: 0; color: var(--secondary-color); }
+
+.comp-arrow {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 5px 0;
+    font-size: 1.2rem;
 }
-/* --- 6. Định dạng cho Khối Thông báo Cập Nhật (Updating Notice) --- */
 
-.updating-notice-card {
+
+/* --- 6. 更新中カード (Updating Card) - 修正済み --- */
+.updating-card {
     max-width: 800px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 30px;
     border-radius: 15px;
     text-align: center;
-    
-    /* Màu nền nhẹ nhàng, nổi bật */
     background-color: var(--card-bg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-light);
     border: 2px dashed var(--primary-color);
-    
     transition: all 0.4s;
 }
 
-.dark-mode .updating-notice-card {
-    background-color: var(--card-bg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-color: var(--primary-color);
+.updating-icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    /* 新しいアニメーション：ゆっくりと鼓動する（Pulse） */
+    animation: gentle-pulse 2s infinite ease-in-out;
 }
 
-.notice-icon {
-    font-size: 3.5rem;
+.updating-icon i {
+    font-size: 4.5rem; 
     color: var(--primary-color);
-    margin-bottom: 15px;
-    animation: pulse 1.5s infinite alternate; /* Hiệu ứng nhấp nháy nhẹ */
 }
 
-.updating-notice-card h3 {
+/* スピナー（Spin）削除 -> パルス（Pulse）追加 */
+@keyframes gentle-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1); /* 少し大きくなる */
+        opacity: 0.8;          /* 少し薄くなる */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.updating-card h3 {
     font-size: 1.8rem;
+    margin-bottom: 20px;
     color: var(--text-color);
-    margin-bottom: 15px;
 }
 
-.updating-notice-card p {
+.updating-main-text {
     font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
+    margin-bottom: 30px;
 }
 
-.updating-notice-card .sub-text {
-    font-style: italic;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-top: 15px;
-}
-
-/* Keyframes cho hiệu ứng nhấp nháy/sống động */
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(1.05); opacity: 1; }
-}
-
-/* Điều chỉnh button secondary cho hợp với notice */
-.updating-notice-card .secondary-btn {
+.current-focus-list {
+    text-align: left;
+    display: inline-block;
     background-color: var(--bg-color);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.dark-mode .current-focus-list {
+    background-color: #383838;
 }
 
-.updating-notice-card .secondary-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--card-bg);
-    transform: translateY(-2px);
+.focus-item {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
-/* --- 7. Mục Tiêu (Goals) --- */
+
+.focus-item i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.updating-sub-text {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+
+/* --- 7. 目標 (Goals) --- */
 .goal-list {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    text-align: center;
 }
 
 .goal-item {
-    flex: 1;
-    background-color: var(--card-bg);
+    flex: 1 1 300px;
+    background-color: var(--bg-color);
     padding: 30px;
     border-radius: 12px;
     box-shadow: var(--shadow-light);
+    text-align: center;
+}
+body.dark-mode .goal-item {
+    background-color: #383838;
 }
 
 .goal-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* --- 8. Liên Hệ và Footer --- */
+/* --- 8. 連絡先とフッター --- */
 .contact-info {
-    max-width: 600px;
-    margin: 30px auto;
-    text-align: left;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .contact-info p {
-    font-size: 1.1rem;
     margin-bottom: 15px;
 }
 
 .contact-icon {
     color: var(--primary-color);
     margin-right: 10px;
+    width: 25px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* --- 9. Responsive (Mobile) --- */
+/* --- 9. モバイル対応 --- */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 80px;
+        top: 70px;
         left: 0;
         background-color: var(--card-bg);
-        border-top: 1px solid #ccc;
-        z-index: 10;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
     }
 
     .nav-links.active {
@@ -546,13 +508,14 @@ footer {
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0;
+        width: 100%;
         text-align: center;
     }
     
     .dark-mode-btn {
         margin-left: 0;
-        width: 100%;
+        margin-top: 10px;
     }
 
     .burger-menu {
@@ -560,16 +523,15 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
-    .hero-content{
-        padding-top: 80px;
-    }
+    
     .tagline {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
-    .goal-list {
-        flex-direction: column;
+    .current-focus-list {
+        padding: 15px;
+        width: 100%;
     }
 }
