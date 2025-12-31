@@ -73,6 +73,7 @@ a:hover {
     transition: background-color 0.4s;
     padding-left: 5%;
     padding-right: 5%;
+    height: 80px; /* Cố định chiều cao navbar */
 }
 
 .dark-mode .navbar {
@@ -202,6 +203,19 @@ a:hover {
     transform: translateY(-2px);
 }
 
+/* Resume Button Style */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.resume-btn:hover {
+    color: white;
+}
+
 /* --- 3. セクション共通設定 --- */
 .section-padding {
     padding: 80px 0;
@@ -306,20 +320,55 @@ body.dark-mode .skill-item {
     color: #28a745; 
 }
 
-/* --- 5. 強み・比較 (Comparison) --- */
-/* --- 5. 比較カード (Philosophy) --- */
-.comparison-container { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-.comparison-card { flex: 1; min-width: 280px; background: var(--card-bg); border-radius: 10px; box-shadow: var(--shadow-light); overflow: hidden; }
-.comp-header { padding: 15px; text-align: center; color: white; font-weight: bold; }
+/* --- 5. 強み・思考法 (Philosophy / Comparison) --- */
+.comparison-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 30px; 
+}
+
+.comparison-card { 
+    flex: 1; 
+    min-width: 280px; 
+    background: var(--card-bg); 
+    border-radius: 10px; 
+    box-shadow: var(--shadow-light); 
+    overflow: hidden; 
+}
+
+.comp-header { 
+    padding: 15px; 
+    text-align: center; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.1rem;
+}
 .construction-card .comp-header { background: #6c757d; }
 .cyber-card .comp-header { background: var(--primary-color); }
+
 .comp-body { padding: 20px; }
 .comp-body ul { list-style: none; }
-.comp-body li { margin-bottom: 10px; color: var(--secondary-color); font-size: 0.95rem; }
+.comp-body li { 
+    margin-bottom: 12px; 
+    color: var(--secondary-color); 
+    font-size: 0.95rem; 
+    display: flex;
+    align-items: center;
+}
+.comp-body li i { margin-right: 10px; }
 .dark-mode .comp-body li { color: #ccc; }
-.transfer-icon { font-size: 2rem; color: var(--text-color); opacity: 0.5; }
 
-/* --- 6. 更新中カード (Updating Card) - 修正済み --- */
+.transfer-icon { 
+    font-size: 2rem; 
+    color: var(--text-color); 
+    opacity: 0.6; 
+    transition: transform 0.3s;
+}
+
+
+/* --- 6. 更新中カード (Updating Card) --- */
 .updating-card {
     max-width: 800px;
     margin: 0 auto;
@@ -335,7 +384,6 @@ body.dark-mode .skill-item {
 .updating-icon {
     display: inline-block;
     margin-bottom: 20px;
-    /* 新しいアニメーション：ゆっくりと鼓動する（Pulse） */
     animation: gentle-pulse 2s infinite ease-in-out;
 }
 
@@ -344,20 +392,10 @@ body.dark-mode .skill-item {
     color: var(--primary-color);
 }
 
-/* スピナー（Spin）削除 -> パルス（Pulse）追加 */
 @keyframes gentle-pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1); /* 少し大きくなる */
-        opacity: 0.8;          /* 少し薄くなる */
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .updating-card h3 {
@@ -438,10 +476,11 @@ body.dark-mode .goal-item {
 }
 .contact-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
 
-/* --- 9. モバイル対応 --- */
+/* --- 9. モバイル対応 (Mobile Responsive) --- */
 @media (max-width: 768px) {
+    /* Navbar Styles */
     .navbar {
-        padding: 15px 20px;
+        padding: 10px 20px;
     }
 
     .nav-links {
@@ -449,16 +488,23 @@ body.dark-mode .goal-item {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 80px; /* Header Height */
         left: 0;
         background-color: var(--card-bg);
         border-bottom: 1px solid rgba(0,0,0,0.1);
         padding: 20px;
         box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        z-index: 999;
     }
 
     .nav-links.active {
         display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+    
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     .nav-links li {
@@ -476,14 +522,41 @@ body.dark-mode .goal-item {
         display: block;
     }
 
+    /* Hero Section */
     .hero-content h1 {
         font-size: 2rem;
     }
     
     .tagline {
         font-size: 1rem;
+        padding: 0 10px;
     }
 
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* FIX: Philosophy Section Mobile Layout (Sửa lỗi trong ảnh) */
+    .comparison-container {
+        flex-direction: column; /* Xếp dọc các thẻ */
+    }
+
+    .comparison-card {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .transfer-icon {
+        transform: rotate(90deg); /* Xoay mũi tên xuống dưới */
+        margin: 15px 0;
+    }
+
+    /* General Adjustments */
+    .section-padding h2 {
+        font-size: 2rem;
+    }
+    
     .current-focus-list {
         padding: 15px;
         width: 100%;
